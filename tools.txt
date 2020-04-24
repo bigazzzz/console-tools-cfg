@@ -14,7 +14,11 @@ Dictionary
 	sdcv
 Editor 
 	vim
-
-
+Music Player
+	moc (mocp)
+Torrent client
+	rtorrent
+TODO-list
+	taskwarrior (task)
 
 
