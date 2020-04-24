@@ -1,0 +1,20 @@
+Shell
+	zsh
+Browser
+	elinks
+Email client
+	alpine
+Terminal
+	tmux
+IM-client
+	centerim
+Twitter client
+	ttytter
+Dictionary
+	sdcv
+Editor 
+	vim
+
+
+
+
