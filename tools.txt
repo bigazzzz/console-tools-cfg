@@ -16,6 +16,7 @@ Editor
 	vim
 Music Player
 	moc (mocp)
+	cmus
 Torrent client
 	rtorrent
 TODO-list
