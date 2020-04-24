@@ -98,3 +98,8 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="mcedit ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -lGFa"
+# для GIT
+#GITREP="/mnt/d/GIT"
+# для sdcv
+#export STARDICT_DATA_DIR="/home/biga/.stardict/dict"
+cd ~
