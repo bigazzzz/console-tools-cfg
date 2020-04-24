@@ -1,7 +1,5 @@
 TMUX
 https://habr.com/ru/post/327630/ Шпаргалка по работе с Tmux (терминальный мультиплексор)
 https://habr.com/ru/post/126996/ Краткая шпаргалка по tmux (менеджеру терминалов)
-https://losst.ru/shpargalka-po-tmux ШПАРГАЛКА ПО TMUX
-https://xakep.ru/2010/05/20/52156/ GNU Screen и tmux: ключ к эффективному использованию консоли
 https://habr.com/ru/post/165437/ Приручаем Tmux для повседневных нужд
 
