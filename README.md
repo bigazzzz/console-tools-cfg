@@ -1,17 +1,17 @@
 # Консольные программы
 
 ## Shell
-*zsh
+zsh
 
 ## Terminal
-*tmux  
+tmux  
 [Приручаем Tmux для повседневных нужд](https://habr.com/ru/post/165437/)
 
 ## Dictionary
-*sdcv
+sdcv
 
 ## Editor 
-*vim
+vim
 [https://scabere.livejournal.com/62886.html](https://scabere.livejournal.com/62886.html)
 [https://sysdev.me/useful-vim/](https://sysdev.me/useful-vim/)
 [https://habr.com/ru/post/165723/](https://habr.com/ru/post/165723/)
@@ -22,25 +22,25 @@
 [http://vimdoc.sourceforge.net/htmldoc/](http://vimdoc.sourceforge.net/htmldoc/)
 
 ## Browser
-*elinks
+elinks
 
 ## Music Player
-*moc (mocp)  
-[http://zenway.ru/page/moc](http://zenway.ru/page/moc)
-*cmus
+moc (mocp)  
+[http://zenway.ru/page/moc](http://zenway.ru/page/moc)  
+cmus
 
 ## TODO-list
-*taskwarrior (task)
+taskwarrior (task)  
 [http://rus-linux.net/MyLDP/consol/taskwarrior-command-line-todo-manager.html](http://rus-linux.net/MyLDP/consol/taskwarrior-command-line-todo-manager.html)
 
 ## Email client
-*alpine
+alpine
 
 ## Torrent client
-*rtorrent
+rtorrent
 
 ## IM-client
-*centerim
+centerim
 
 ## Twitter client
-*ttytter
+ttytter
