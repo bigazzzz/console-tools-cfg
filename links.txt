@@ -10,3 +10,6 @@ https://sysdev.me/useful-vim/
 https://habr.com/ru/post/165723/
 http://dimio.org/fajl-nastrojki-vim-vimrc-dlya-linux-i-windows.html
 https://jenyay.net/Programming/Vim
+https://eax.me/vim-commands/
+https://ru.wikibooks.org/w/index.php?title=Vim
+http://vimdoc.sourceforge.net/htmldoc/
