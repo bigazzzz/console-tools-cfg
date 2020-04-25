@@ -44,6 +44,16 @@ set linebreak
 set dy=lastline
 " устанавливаем номера строк
 set number
+" перечитывать изменённые файлы автоматически
+set autoread
+" использовать диалоги вместо сообщений об ошибках
+set confirm
+" во избежание лишней путаницы использовать системный буфер обмена вместо буфера Vim
+set clipboard=unnamed 
+" включить сохранение резервных копий
+set backup
+" показывать совпадающие скобки для HTML-тегов
+set mps+=<:> 
 " Проверка орфографии
 "set spell spelllang=ru,en
 " set charset translation encoding
@@ -203,3 +213,4 @@ autocmd FileType * execute 'setlocal dict+=~/.vim/words/'.&filetype.'.txt'
 if filereadable(".vim_config")
     source .vim_config
 endif
+
