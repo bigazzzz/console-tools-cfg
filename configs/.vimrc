@@ -198,9 +198,7 @@ set balloondelay=100
 
 " Новый Python файл забиваем стандартом
 function! WritePyinit()
-    let @q = "
-    \#\!/usr/bin/env python\n\#-*- encoding: utf-8 -*-\n\nimport sys, warnings\n\nwarnings.simplefilter('always')\n\ndef main(argv=sys.argv):\n    pass\n\nif __name__ == \"__main__\":\n           
-sys.exit(main())\n"
+    let @q = "\#\!/usr/bin/env python\n\#-*- encoding: utf-8 -*-\n\n"
     execute "0put q"
 endfunction
 autocmd BufNewFile *.py call WritePyinit()
