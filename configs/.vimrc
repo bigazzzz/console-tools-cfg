@@ -1,6 +1,12 @@
 "
 "	Основные настройки
 "
+" Включаем подсветку синтаксиса
+syntax on
+" Цветовая схема
+colorscheme darkblue
+" Выключаем перенос строк
+set nowrap
 " Чтобы нормально вводить команды в русской раскладке
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 " по умолчанию - латинская раскладка
@@ -126,5 +132,3 @@ endfunction
 set bexpr=MyBalloonExpr()
 set ballooneval
 set balloondelay=100
-
-
