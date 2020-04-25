@@ -23,6 +23,10 @@ set is
 set iskeyword=@,48-57,_,192-255
 " задать размер табуляции в четыре пробела
 set ts=4
+" Заменять tab на пробелы
+set expandtab
+" В командах отступа 4 пробела
+set shiftwidth=4
 " отображение выполняемой команды
 set showcmd 
 " перенос по словам, а не по буквам
@@ -34,20 +38,27 @@ set mouse=a
 set number
 " Проверка орфографии
 "set spepll spelllang=ru,en
-" Корректная работа с русскими символами
-set iskeyword=@,48-57,_,192-255
 " set charset translation encoding
 set encoding=utf-8
 " set terminal encoding
 set termencoding=utf-8
 " set save encoding
-set fileencoding=utf-8"
+set fileencoding=utf-8
 " Список для определения кодировки файла в порядке предпочтения
 set fileencodings=utf8,koi8r,cp1251,cp866,ucs-2le   
 " Строка состояния
 set laststatus=2   " всегда показывать строку статуса
 set statusline=%f%m%r%h%w\ %y\ enc:%{&enc}\ ff:%{&ff}\ fenc:%{&fenc}%=(ch:%3b\ hex:%2B)\ col:%2c\ line:%2l/%L\ [%2p%%]
-
+" Сворачивание блоков
+set foldenable
+" Сворачиваем на основе синтаксиса
+set foldmethod=syntax
+" Сворачиваем на основе отступов
+" set foldmethod=indent
+" При автодополнении подсказки
+set wildmenu
+" Отображать табуляцию и переводы строк
+set list
 "
 "	Маппинг клавиш
 "
