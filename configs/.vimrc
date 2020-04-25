@@ -1,12 +1,20 @@
 "
-"	Основные настройки
+"   Основные настройки
 "
 " Включаем подсветку синтаксиса
 syntax on
 " Цветовая схема
 colorscheme darkblue
+" Регистронезависимый поиск
+set ignorecase
+" Игнорировать регистр при поиске, если нет больших букв
+set smartcase
 " Выключаем перенос строк
-set nowrap
+set wrap
+" Перенос по словам, а не по буквам
+set linebreak
+" Дополнение в виде меню
+set completeopt=menu
 " Чтобы нормально вводить команды в русской раскладке
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 " по умолчанию - латинская раскладка
@@ -15,6 +23,8 @@ set iminsert=0
 set imsearch=0
 " игнорировать регистр при поиске
 set ic
+" Установить вирутальный звонок
+set visualbell
 " подсвечивать поиск
 set hls
 " использовать инкрементальный поиск
@@ -32,12 +42,10 @@ set showcmd
 " перенос по словам, а не по буквам
 set linebreak
 set dy=lastline
-" прокручивать текст колёсиком мыши и вставлять выделенное в X`ах мышкой в Vim нажатием средней кнопки мыши 
-set mouse=a
 " устанавливаем номера строк
 set number
 " Проверка орфографии
-"set spepll spelllang=ru,en
+"set spell spelllang=ru,en
 " set charset translation encoding
 set encoding=utf-8
 " set terminal encoding
@@ -55,14 +63,48 @@ set foldenable
 set foldmethod=syntax
 " Сворачиваем на основе отступов
 " set foldmethod=indent
+autocmd FileType *.py execute 'set foldmethod=indent'
 " При автодополнении подсказки
 set wildmenu
 " Отображать табуляцию и переводы строк
 set list
+" Настройка отображения специальных символов
+set list listchars=tab:→\ ,trail:·
+" Включить автоматическую расстановку отступов
+set autoindent
+" Включить “умную” расстановку отступов
+set smartindent
+" Включаем несовместимость настроек с Vi, так как Vi нам и не понадобится
+set nocompatible
+" Показывать положение курсора всё время.
+set ruler
+" Показывать незавершённые команды в статусбаре
+set showcmd
+" Отображение парных символов
+set showmatch
+" Подсвечивать линию текста, на которой находится курсор
+"set cursorline
+"highlight CursorLine guibg=lightblue ctermbg=lightblue
+"highlight CursorLine term=none cterm=inverse,bold
+" В 7-й версии увеличиваем вложенность UNDO 
+if version >= 700
+    set history=64
+    set undolevels=128
+    set undodir=~/.vim/undodir/
+    set undofile
+    set undolevels=1000
+    set undoreload=10000
+endif
 "
-"	Маппинг клавиш
+"    Работа с мышкой 
 "
-" Работа с мышкой 
+set mouse=a
+" Скрывать указатель мыши, когда печатаем
+set mousehide
+"
+"   Маппинг клавиш
+"
+" прокручивать текст колёсиком мыши и вставлять выделенное в X`ах мышкой в Vim нажатием средней кнопки мыши 
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 " Cохранение по F2
@@ -84,7 +126,7 @@ map <F6> :tabnext <CR>
 imap <F12> <Esc> GGO
 map <F12>  GGO
 "
-"	Меню
+"   Меню
 "
 " проверка орфографии:
 set wildmenu
@@ -120,7 +162,7 @@ menu Encoding.ucs-2le :e ++enc=ucs-2le<CR>
 menu Encoding.utf-8   :e ++enc=utf-8<CR>
 map <F11> :emenu Encoding.<Tab>
 "
-"	Функции
+"   Функции
 "
 " Позволяет по <Tab>, более привычному некоторым пользователям, вызывать авто-дополнение для текущего активного синтаксиса:
  function! InsertTabWrapper(direction)
@@ -136,10 +178,28 @@ map <F11> :emenu Encoding.<Tab>
  inoremap <tab> <c-r>=InsertTabWrapper ("forward")<cr>
  inoremap <s-tab> <c-r>=InsertTabWrapper ("backward")<cr>
 " 
-
+" Всплывающий перевод
 function! MyBalloonExpr()
        return system("sdcv -0nce ". v:beval_text)
 endfunction
 set bexpr=MyBalloonExpr()
 set ballooneval
 set balloondelay=100
+
+" Новый Python файл забиваем стандартом
+function! WritePyinit()
+    let @q = "
+    \#\!/usr/bin/env python\n\#-*- encoding: utf-8 -*-\n\nimport sys, warnings\n\nwarnings.simplefilter('always')\n\ndef main(argv=sys.argv):\n    pass\n\nif __name__ == \"__main__\":\n           
+sys.exit(main())\n"
+    execute "0put q"
+endfunction
+autocmd BufNewFile *.py call WritePyinit()
+
+" Включить словарь - исходя из расширения файла
+autocmd FileType * execute 'setlocal dict+=~/.vim/words/'.&filetype.'.txt'
+
+
+" доработка – автозагрузка произвольного конфигурационного файла из директории запуска vim. это позволяет, к примеру, задать определенные настройки компилятора для каждой из директорий и при запуски vim-а подгружить их автоматически. настройки должны быть записаны в файл .vim_config.
+if filereadable(".vim_config")
+    source .vim_config
+endif
