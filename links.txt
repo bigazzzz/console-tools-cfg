@@ -4,3 +4,5 @@ MOC
 http://zenway.ru/page/moc
 TASKWARRIOR
 http://rus-linux.net/MyLDP/consol/taskwarrior-command-line-todo-manager.html
+VIM
+https://scabere.livejournal.com/62886.html
