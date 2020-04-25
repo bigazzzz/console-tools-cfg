@@ -6,3 +6,7 @@ TASKWARRIOR
 http://rus-linux.net/MyLDP/consol/taskwarrior-command-line-todo-manager.html
 VIM
 https://scabere.livejournal.com/62886.html
+https://sysdev.me/useful-vim/
+https://habr.com/ru/post/165723/
+http://dimio.org/fajl-nastrojki-vim-vimrc-dlya-linux-i-windows.html
+https://jenyay.net/Programming/Vim
