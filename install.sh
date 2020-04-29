@@ -18,6 +18,7 @@ sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~
 cp $MY_CONFIG_DIR/.zshrc_my ~/
 cp $MY_CONFIG_DIR/.p10k.zsh ~/
 echo "source ~/.zshrc_my" >> ~/.zshrc
+source ~/.zshrc
 
 # TMUX 
 sudo apt install -y tmux
@@ -26,13 +27,12 @@ cp $MY_CONFIG_DIR/.tmux.conf ~/
 # VIM
 sudo apt install -y vim 
 sudo update-alternatives --set editor `which vim.tiny`
-mkdir -p ~/.vim/spell
-cd ~/.vim/spell
-[ ! -f en.utf-8.spl ] && wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.spl
-[ ! -f en.utf-8.sug ] && wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.sug
-[ ! -f ru.utf-8.spl ] && wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.spl
-[ ! -f ru.utf-8.sug ] && wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.sug 
-cd $MY_CONFIG_DIR/../
+VIM_SPELL="~/.vim/spell"
+mkdir -p $VIM_SPELL
+[ ! -f $VIM_SPELL/en.utf-8.spl ] && wget --directory-prefix=$VIM_SPELL http://ftp.vim.org/vim/runtime/spell/en.utf-8.spl
+[ ! -f $VIM_SPELL/en.utf-8.sug ] && wget --directory-prefix=$VIM_SPELL http://ftp.vim.org/vim/runtime/spell/en.utf-8.sug
+[ ! -f $VIM_SPELL/ru.utf-8.spl ] && wget --directory-prefix=$VIM_SPELL http://ftp.vim.org/vim/runtime/spell/ru.utf-8.spl
+[ ! -f $VIM_SPELL/ru.utf-8.sug ] && wget --directory-prefix=$VIM_SPELL http://ftp.vim.org/vim/runtime/spell/ru.utf-8.sug 
 cp $MY_CONFIG_DIR/.vimrc ~/
 
 # SDCV
