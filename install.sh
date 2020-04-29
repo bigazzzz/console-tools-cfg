@@ -26,7 +26,7 @@ cp $MY_CONFIG_DIR/.tmux.conf ~/
 # VIM
 sudo apt install -y vim 
 sudo update-alternatives --set editor `which vim.tiny`
-mkdir ~/.vim/spell
+mkdir -p ~/.vim/spell
 cd ~/.vim/spell
 wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.spl
 wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.sug
