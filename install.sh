@@ -41,5 +41,5 @@ cp $MY_CONFIG_DIR/.vimrc ~/
 
 # OTHER
 mkdir -p ~/.config
-cp $MY_CONFIG_DIR/.config/ ~/.config/
+cp -r $MY_CONFIG_DIR/.config/ ~/.config/
 cp $MY_CONFIG_DIR/.dircolors ~/
