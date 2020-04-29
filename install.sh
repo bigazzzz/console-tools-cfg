@@ -32,6 +32,7 @@ cd ~/.vim/spell
 [ ! -f en.utf-8.sug ] && wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.sug
 [ ! -f ru.utf-8.spl ] && wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.spl
 [ ! -f ru.utf-8.sug ] && wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.sug 
+cd $MY_CONFIG_DIR/../
 cp $MY_CONFIG_DIR/.vimrc ~/
 
 # SDCV
