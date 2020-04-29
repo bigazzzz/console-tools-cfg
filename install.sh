@@ -5,9 +5,6 @@ MY_CONFIG_DIR=`dirname $0`/configs
 # MC
 sudo apt update && sudo apt install mc -y
 
-exit 0
-pause
-
 # ZSH && oh-my-zsh
 sudo apt install zsh -y && sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # ZSH plugins
