@@ -28,10 +28,10 @@ sudo apt install -y vim
 sudo update-alternatives --set editor `which vim.tiny`
 mkdir -p ~/.vim/spell
 cd ~/.vim/spell
-[ -f en.utf-8.spl ] && wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.spl
-[ -f en.utf-8.sug ] && wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.sug
-[ -f ru.utf-8.spl ] && wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.spl
-[ -f ru.utf-8.sug ] && wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.sug 
+[ ! -f en.utf-8.spl ] && wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.spl
+[ ! -f en.utf-8.sug ] && wget http://ftp.vim.org/vim/runtime/spell/en.utf-8.sug
+[ ! -f ru.utf-8.spl ] && wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.spl
+[ ! -f ru.utf-8.sug ] && wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.sug 
 cp $MY_CONFIG_DIR/.vimrc ~/
 
 # SDCV
