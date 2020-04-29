@@ -17,9 +17,9 @@ sed -i 's/plugins=(git)/plugins=(git zsh-syntax-highlighting zsh-autosuggestions
 # ZSH themes
 sudo apt install fonts-powerline -y
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k//powerlevel10k"/g' ~/.zshrc
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
 cp $MY_CONFIG_DIR/.zshrc_my ~/
-cp $MY_CONFIG_DIR/.p10.zsh ~/
+cp $MY_CONFIG_DIR/.p10k.zsh ~/
 echo "source ~/.zshrc_my" >> ~/.zshrc
 
 # TMUX 
