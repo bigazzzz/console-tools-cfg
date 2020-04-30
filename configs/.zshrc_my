@@ -1,2 +1,40 @@
-alias ll="ls -lGFa"
+# Aliases
+#
+alias -g g="| grep"
+alias -g l="| less"
+alias -g m="| more"
+alias -r ll="ls -lGFa"
 cd ~
+
+# Directory aliases
+hash -d gitrep=/mnt/d/Git
+
+#kill & killall autocomplete
+zstyle ':completion:*:processes' command 'ps -ax' 
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;32'
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*'   force-list always
+
+zstyle ':completion:*:processes-names' command 'ps -e -o comm='
+zstyle ':completion:*:*:killall:*' menu yes select
+zstyle ':completion:*:killall:*'   force-list always
+
+
+# показать только файлы
+# ls *(.)
+# показать самый свежий файл
+# ls *(.om[1])
+# показать файлы измененные сегодня
+# ls -l *(.m0)
+# найти style.css по всем дискам
+# ls **/style.css
+# показать все файлы более 50 Кб
+# ls -l *(.Lk+50)
+# показать файлы более 5 Мб по всем дискам
+# ls **/*(.Lm+5)
+# показать все файлы, кроме .log
+# ls *.^log
+# открыть самый свежий файл
+# vi *(.om[1])
+
+# многое из магии требует setopt EXTENDED_GLOB
