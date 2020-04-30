@@ -3,6 +3,9 @@
 alias -g g="| grep"
 alias -g l="| less"
 alias -g m="| more"
+alias -r ga="git add -A"
+alias -r gc="git commit -m"
+alias -r gp="git push"
 alias -r ll="ls -lGFa"
 cd ~
 
@@ -19,22 +22,3 @@ zstyle ':completion:*:processes-names' command 'ps -e -o comm='
 zstyle ':completion:*:*:killall:*' menu yes select
 zstyle ':completion:*:killall:*'   force-list always
 
-
-# показать только файлы
-# ls *(.)
-# показать самый свежий файл
-# ls *(.om[1])
-# показать файлы измененные сегодня
-# ls -l *(.m0)
-# найти style.css по всем дискам
-# ls **/style.css
-# показать все файлы более 50 Кб
-# ls -l *(.Lk+50)
-# показать файлы более 5 Мб по всем дискам
-# ls **/*(.Lm+5)
-# показать все файлы, кроме .log
-# ls *.^log
-# открыть самый свежий файл
-# vi *(.om[1])
-
-# многое из магии требует setopt EXTENDED_GLOB
