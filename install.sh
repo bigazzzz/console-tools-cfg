@@ -5,7 +5,7 @@ MY_CONFIG_DIR=`dirname $0`/configs
 # MC
 sudo apt update && sudo apt install mc tmux fonts-powerline zsh vim -y
 # ZSH && oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --skip-chsh"
 # ZSH plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -24,7 +24,7 @@ cp $MY_CONFIG_DIR/.tmux.conf ~/
 
 # VIM
 sudo update-alternatives --set editor `which vim.tiny`
-VIM_SPELL="~/.vim/spell"
+VIM_SPELL=~/.vim/spell
 mkdir -p $VIM_SPELL
 [ ! -f $VIM_SPELL/en.utf-8.spl ] && wget --directory-prefix=$VIM_SPELL http://ftp.vim.org/vim/runtime/spell/en.utf-8.spl
 [ ! -f $VIM_SPELL/en.utf-8.sug ] && wget --directory-prefix=$VIM_SPELL http://ftp.vim.org/vim/runtime/spell/en.utf-8.sug
