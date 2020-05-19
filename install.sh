@@ -5,10 +5,7 @@ MY_CONFIG_DIR=`dirname $0`/configs
 # MC
 sudo apt update && sudo apt install mc tmux fonts-powerline zsh vim -y
 # ZSH && oh-my-zsh
-TMPNAME=/tmp/my_tmpfile.$(dd if=/dev/random bs=1 count=20 2> /dev/null | od -h | tr -d " \\t\\n")
-curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh > ${TMPNAME}
-chmod +x ${TMPNAME}
-${TMPNAME} --skip-chsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --skip-chsh"
 # ZSH plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
