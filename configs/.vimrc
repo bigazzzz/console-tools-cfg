@@ -108,9 +108,9 @@ endif
 "
 "    Работа с мышкой 
 "
-set mouse=a
+" set mouse=a
 " Скрывать указатель мыши, когда печатаем
-set mousehide
+" set mousehide
 "
 "   Маппинг клавиш
 "
